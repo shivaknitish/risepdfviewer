@@ -54,7 +54,7 @@ function SendMessage() {
 function ExportChat() {
     var player = GetPlayer();
     var chatHistory = player.GetVar("chatHistory");
-    var blob = new Blob([chatHistory], { type: 'application/msword' });
+    var blob = new Blob([chatHistory], { type: 'application/pdf' });
     var downloadLink = document.createElement("a");
     downloadLink.download = "Chat History.pdf";
     downloadLink.href = window.URL.createObjectURL(blob);
